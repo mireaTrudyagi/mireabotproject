@@ -1,5 +1,5 @@
 from aiogram import types, Dispatcher
-from create_bot import bot
+from create import bot
 
 async def echo_send(message: types.Message):
     await bot.send_message(message.from_user.id, "Нет такой команды")
