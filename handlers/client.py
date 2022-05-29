@@ -5,7 +5,7 @@ from data import search
 
 async def commands_start(message : types.Message):
     try:
-        await bot.send_message(message.from_user.id, 'Команды:\n\nПесня\nИсполнитель (в работе)\nЖанр (в работе)', reply_markup=kb_client)
+        await bot.send_message(message.from_user.id, 'Команды:\n\nПесня\nИсполнитель (в работе)\nЖанр (в работе)\nАльбом (в работе)', reply_markup=kb_client)
         await message.delete()
     except:
         await message.reply('https://t.me/musicprojectmirea_bot')
