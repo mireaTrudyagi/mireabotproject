@@ -1,6 +1,6 @@
 from aiogram.utils import executor
 from create import dp
-from date_base import search
+from data import search
 
 search.firebase_start()
 
