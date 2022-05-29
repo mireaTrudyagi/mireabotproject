@@ -1,10 +1,8 @@
 from aiogram import types, Dispatcher
-from create import dp, bot
+from create_bot import bot
 
-@dp.message_handler()
-async def echo(message : types.Message):
-    if message.text == 'Hello':
-        await message.answer('Hey, how r u?')
+async def echo_send(message: types.Message):
+    await bot.send_message(message.from_user.id, "Нет такой команды")
 
-def reg_other(dp : Dispatcher):
-    dp.register_message_handler(echo)
+def register_handlers_other(dp : Dispatcher):
+    dp.register_message_handler(echo_send)
