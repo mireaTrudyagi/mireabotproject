@@ -1,29 +1,31 @@
 from aiogram import types, Dispatcher
-from create import dp, bot
+from create_bot import dp, bot
+from keyboards.client_kb import kb_client
+from date_base import search
 
-@dp.message_handler(commands=['start', 'help'])
-async def commands_start(message : types.message):
+async def commands_start(message : types.Message):
     try:
-        await bot.send_message(message.from_user.id, 'Команды:\n\n/song (Песня)\n/singer (Исполнитель)\n/style (Жанр)')
+        await bot.send_message(message.from_user.id, 'Команды:\n\nПесня\nИсполнитель (в работе)\nЖанр (в работе)', reply_markup=kb_client)
         await message.delete()
     except:
-        await message.reply('https://t.me/musicboy')
+        await message.reply('https://t.me/FirebaseOzprak_bot')
 
-@dp.message_handler(commands=['song'])
-async def search_song(message : types.message):
-    await bot.send_message(message.from_user.id, 'Suc1')
+async def search_song(message : types.Message):
+    await bot.send_message(message.from_user.id, 'Выберите песню: S1, S2, S3')
 
-@dp.message_handler(commands=['singer'])
-async def search_singer(message: types.message):
-    await bot.send_message(message.from_user.id, 'Suc2')
+async def search_singer(message: types.Message):
+    await bot.send_message(message.from_user.id, 'Выберите исполнителя: (Пока не работает)')
 
-@dp.message_handler(commands=['style'])
-async def search_style(message: types.message):
-    await bot.send_message(message.from_user.id, 'Suc3')
+async def search_style(message: types.Message):
+    await bot.send_message(message.from_user.id, 'Выберите стиль: (Пока не работает)')
+
+async def search_album(message: types.Message):
+    await bot.send_message(message.from_user.id, 'Выберите альбом: (Пока не работает)')
 
 
-def reg_client(dp : Dispatcher):
+def register_handlers_client(dp: Dispatcher):
     dp.register_message_handler(commands_start, commands=['start', 'help'])
-    dp.register_message_handler(search_song, commands=['song'])
-    dp.register_message_handler(search_singer, commands=['singer'])
-    dp.register_message_handler(search_style, commands=['style'])
+    dp.register_message_handler(search_song, text=['Песня'])
+    dp.register_message_handler(search_singer, text=['Исполнитель'])
+    dp.register_message_handler(search_style, text=['Жанр'])
+    dp.register_message_handler(search_album, text=['Альбом'])
