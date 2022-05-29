@@ -4,7 +4,7 @@ from create import dp
 from create import bot
 
 firebaseConfig = {
-  'apiKey': "AIzaSyAnn4DrW2ixhH49ebkZvZ6Xx5S1QlilfFw",
+  'apiKey': "XXX",
   'databaseURL': "https://arvazbase-default-rtdb.firebaseio.com",
   'authDomain': "arvazbase.firebaseapp.com",
   'storageBucket': "arvazbase.appspot.com",
