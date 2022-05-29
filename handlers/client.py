@@ -8,7 +8,7 @@ async def commands_start(message : types.Message):
         await bot.send_message(message.from_user.id, 'Команды:\n\nПесня\nИсполнитель (в работе)\nЖанр (в работе)', reply_markup=kb_client)
         await message.delete()
     except:
-        await message.reply('https://t.me/FirebaseOzprak_bot')
+        await message.reply('https://t.me/musicprojectmirea_bot')
 
 async def search_song(message : types.Message):
     await bot.send_message(message.from_user.id, 'Выберите песню: S1, S2, S3')
