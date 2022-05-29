@@ -1,7 +1,7 @@
 import pyrebase
 from aiogram import types
-from create_bot import dp
-from create_bot import bot
+from create import dp
+from create import bot
 
 firebaseConfig = {
   'apiKey': "AIzaSyAnn4DrW2ixhH49ebkZvZ6Xx5S1QlilfFw",
