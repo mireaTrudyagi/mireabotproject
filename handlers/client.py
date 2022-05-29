@@ -17,7 +17,7 @@ async def search_singer(message: types.Message):
     await bot.send_message(message.from_user.id, 'Выберите исполнителя: (Пока не работает)')
 
 async def search_style(message: types.Message):
-    await bot.send_message(message.from_user.id, 'Выберите стиль: (Пока не работает)')
+    await bot.send_message(message.from_user.id, 'Выберите жанр: (Пока не работает)')
 
 async def search_album(message: types.Message):
     await bot.send_message(message.from_user.id, 'Выберите альбом: (Пока не работает)')
