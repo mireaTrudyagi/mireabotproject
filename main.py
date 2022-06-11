@@ -1,16 +1,15 @@
 from aiogram.utils import executor
 from create import dp
-from data import search
+from handlers import client
+from aiogram.contrib.fsm_storage.memory import MemoryStorage
 
-search.firebase_start()
+storage = MemoryStorage()
+
+client.firebase_start()
 
 async def on_startup(_):
     print('bot is online')
 
-
-from handlers import client, other
-
 client.register_handlers_client(dp)
-other.register_handlers_other(dp)
 
 executor.start_polling(dp, skip_updates=True, on_startup=on_startup)
