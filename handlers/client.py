@@ -150,7 +150,7 @@ async def find_song(message: types.Message, state: FSMContext):
     elif message.text == 'Главное меню\U0001F3E0':
         await state.finish();
     else:
-        await bot.send_message(message.from_user.id, "Простите, я не знаю такой команы")
+        await bot.send_message(message.from_user.id, "Простите, я не знаю такой команды")
 
 async def find_genre(message: types.Message, state: FSMContext):
     if message.text == 'Rock\U0001FAA8':
@@ -168,7 +168,7 @@ async def find_genre(message: types.Message, state: FSMContext):
         await state.finish();
 
     else:
-        await bot.send_message(message.from_user.id, "Простите, я не знаю такой команы")
+        await bot.send_message(message.from_user.id, "Простите, я не знаю такой команды")
 
 async def find_singer(message: types.Message, state: FSMContext):
     if message.text == 'AJR\U0001F604':
@@ -186,7 +186,7 @@ async def find_singer(message: types.Message, state: FSMContext):
     elif message.text == 'Главное меню\U0001F3E0':
         await state.finish();
     else:
-        await bot.send_message(message.from_user.id, "Простите, я не знаю такой команы")
+        await bot.send_message(message.from_user.id, "Простите, я не знаю такой команды")
 
 async def find_album(message: types.Message, state: FSMContext):
     if message.text == 'Scaled And Icy\U0001F432':
@@ -205,7 +205,7 @@ async def find_album(message: types.Message, state: FSMContext):
         await state.finish();
         
     else:
-        await bot.send_message(message.from_user.id, "Простите, я не знаю такой команы")
+        await bot.send_message(message.from_user.id, "Простите, я не знаю такой команды")
         
 
 async def menue_start(message : types.Message):
